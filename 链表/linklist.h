@@ -20,7 +20,7 @@ node* create_list(int len) {
     node* head = new node(0);
     node * tail = head;
     for (int i = 0; i < len; i++) {
-        int new_data;
+        TYPE new_data;
         std::cin >> new_data;
         node *p = new node(new_data);
         tail->next = p;
@@ -30,6 +30,23 @@ node* create_list(int len) {
     return head;
 }
 
+node* create_list1(int len) {
+    /*
+        创建长度为len的单链表
+        头插法
+        返回链表头节点
+    */
+    node* head = new node(0);
+    for (int i = 0; i < len; i++) {
+        TYPE new_data;
+        std::cin >> new_data;
+        node *p = new node(new_data);
+        p->next = head->next;
+        head->next = p;
+    }
+    return head;
+    
+}
 void show_list(node* head) {
     node* p = head->next;
     while (p != NULL) {
@@ -60,4 +77,21 @@ bool delete_data(node* head, int index) {
     p->next = p->next->next;
     delete d;
     return true;
+}
+
+void reverse_list(node* &head) {
+    node* dummy = head;
+    if (head->next->next == NULL) return;
+    node* pre = dummy->next;
+    node* cur = pre->next;
+    while (cur != NULL) {
+        pre->next = cur->next;
+        cur->next = dummy->next;
+        dummy->next = cur;
+        cur = pre->next;
+    }
+}
+
+void sort_list(node *head, int len) {
+
 }
