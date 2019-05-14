@@ -10,7 +10,7 @@ int main(int arg, char** argv) {
     quick_sort(a, 0, num - 1);
     show_array(a, num);
     */
-    merge_sort(a, 0, num - 1);
+    shell_sort(a, num);
     show_array(a, num);
 
 }

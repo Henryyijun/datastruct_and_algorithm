@@ -3,7 +3,7 @@
 #include "quick_sort.h"
 #include "insertion_sort.h"
 #include "merge_sort.h"
-
+#include "shell.h"
 void show_array(int *a, int len) {
     for (int i = 0; i < len; i++) {
         std::cout << a[i] << " ";
