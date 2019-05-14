@@ -6,7 +6,11 @@ int main(int arg, char** argv) {
     /*bubble_sort(a, num);
    
     bubble_sort_op(a, num);
-    show_array(a, num);*/
+    show_array(a, num);
     quick_sort(a, 0, num - 1);
     show_array(a, num);
+    */
+    merge_sort(a, 0, num - 1);
+    show_array(a, num);
+
 }
